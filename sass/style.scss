@@ -96,9 +96,6 @@ article {
 .container-phone{
     grid-area: container-phone;
 }
-.container-text{
-    grid-area: container-text;
-}
 article{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -112,6 +109,7 @@ article{
     flex-flow: wrap;
     justify-content: flex-end;
     margin-right: 2rem;
+    grid-area: container-text;
 }
 .text-article{
     display: flex;
@@ -150,10 +148,6 @@ article{
     h3,p{
         color: $secondary-text;
         margin-bottom: 10px;
-    }
-    p{
-        margin-top: 10px;
-        font-size: 13px;
     }
 }
 footer{
@@ -236,6 +230,9 @@ footer{
 .modal-terms-remove {
     font-style: none;
     text-decoration: none;
+}
+.close-terms{
+    cursor: pointer;
 }
   .content-close{
       display: flex;
@@ -627,6 +624,55 @@ footer{
             }
          }
     }
+    .modal {
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100vw; 
+        height: 100vh; 
+        overflow: auto; 
+        background-color: rgba(46, 44, 138, 0.5);
+      }
+
+      .content-close{
+          display: flex;
+          justify-content: flex-end;
+      }
+      .tablinks{
+          cursor: pointer;
+      }
+      .tab{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(46, 44, 138, 0.5);
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        a{
+            color: $secondary-text;
+            font-size: 15px;
+        }
+        .content-terms{
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+      /* Modal Content */
+      .modal-content {
+        padding: 30px 70px;
+        width: 80vw;
+        height: 80vh;
+        p{
+            color: $secondary-text;
+        }
+        h3{
+            color: $secondary-text;
+        }
+      }
     footer #copyright {
         opacity: 70%;
         margin-top: 3.8rem;
