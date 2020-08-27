@@ -20,7 +20,11 @@ h5 {
   font-weight: normal;
   margin-top: 2px;
 }
-
+.container{
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .btn {
   display: none;
   background-color: #6E6BFF;
