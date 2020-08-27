@@ -20,11 +20,7 @@ h5 {
   font-weight: normal;
   margin-top: 2px;
 }
-.container{
-  max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .btn {
   display: none;
   background-color: #6E6BFF;
@@ -103,10 +99,6 @@ article .container-phone {
   grid-area: container-phone;
 }
 
-.container-text {
-  grid-area: container-text;
-}
-
 article {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text-describe text-describe" "container-phone container-text";
@@ -118,6 +110,7 @@ article {
   flex-flow: wrap;
   justify-content: flex-end;
   margin-right: 2rem;
+  grid-area: container-text;
 }
 
 .text-article {
@@ -158,10 +151,6 @@ article {
 .container-video h3, .container-video p {
   color: #2E2C8A;
   margin-bottom: 10px;
-}
-.container-video p {
-  margin-top: 10px;
-  font-size: 13px;
 }
 
 footer {
@@ -244,6 +233,10 @@ footer #copyright {
 .modal-terms-remove {
   font-style: none;
   text-decoration: none;
+}
+
+.close-terms {
+  cursor: pointer;
 }
 
 .content-close {
@@ -631,6 +624,7 @@ footer #copyright {
   .download-app .buttons-download .btn-apple {
     width: 140px;
   }
+
   .modal {
     display: none;
     position: fixed;
@@ -673,11 +667,7 @@ footer #copyright {
 
   /* Modal Content */
   .modal-content {
-    border-radius: 30px;
-    background-color: #fefefe;
-    margin: auto;
     padding: 30px 70px;
-    border: 1px solid #888;
     width: 80vw;
     height: 80vh;
   }
@@ -687,9 +677,7 @@ footer #copyright {
   .modal-content h3 {
     color: #2E2C8A;
   }
-  .close {
-    cursor: pointer;
-  }
+
   footer #copyright {
     opacity: 70%;
     margin-top: 3.8rem;
@@ -815,7 +803,6 @@ footer #copyright {
     color: #2E2C8A;
     font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
   }
   .close :hover,
 .close :focus {
@@ -823,15 +810,11 @@ footer #copyright {
     text-decoration: none;
     cursor: pointer;
   }
-  .close-terms :hover{
-    cursor: pointer;
-  }
   .close ::after {
     content: "asa";
     width: 20px;
     height: 20px;
     background-color: #000;
-    cursor: pointer;
   }
 }
 
