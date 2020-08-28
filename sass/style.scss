@@ -2,6 +2,7 @@ $pattern-text: #fff;
 $secondary-text: #2E2C8A;
 $opacity-70: 70%;
 $primaty-btn:#6E6BFF;
+$scroll-background: #c4c4c4;
 $rem-2:2rem;
 *{
     padding: 0;
@@ -117,10 +118,9 @@ article{
     margin-top: 2.8rem;
     text-align: right;
     height: 20%;
-    .line-break{
+    :nth-child(1){
         margin-top: 20px;
     }
-   
 }
 .download-app{
     display: flex;
@@ -179,6 +179,12 @@ footer{
             opacity: 100%;
             cursor: pointer;
         }
+    }
+    .tablinks{
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .download-app{
         display: flex;
@@ -435,6 +441,12 @@ footer{
         }
     }
     .text-article{
+        .secondary-text{
+            :nth-child(1){
+                margin-top: 0;
+            }
+        }
+        
         p{
             font-size: 20px;
         }
@@ -531,9 +543,42 @@ footer{
     }
 }
 @media  only screen and (min-width: 1250px) {
+    .modal{
+        ::-webkit-scrollbar-track {
+            background-color: $scroll-background;
+            border-radius: 0 30px 30px 0;
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+            background: $scroll-background;
+            border-radius: 0 30px 30px 0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3F51B5;
+            border-radius: 30px;
+
+        } 
+    }
+        ::-webkit-scrollbar-track {
+            background-color: $scroll-background;
+            border-radius: 30px;
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+            background: $scroll-background;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3F51B5;
+            border-radius: 30px;
+
+        }
+
+    
+    
     .download-app {
         justify-content: flex-start;
         align-items: flex-end;
+        
     }
     .container-btn{
         display: none;
@@ -645,7 +690,6 @@ footer{
       }
       .tablinks{
           cursor: pointer;
-          height: 25px;
       }
       .tab{
         display: grid;
@@ -670,6 +714,7 @@ footer{
         padding: 30px 70px;
         width: 80vw;
         height: 80vh;
+        border-radius: 15px;
         p{
             color: $secondary-text;
         }
@@ -679,8 +724,12 @@ footer{
       }
     footer #copyright {
         opacity: 70%;
-        margin-top: 3.8rem;
+        margin-top: 4.8rem;
 
+    }
+    footer .download-app {
+        margin-top: 50px;
+        padding-bottom: 0;
     }
     .copyright {
         display: flex;
@@ -768,7 +817,7 @@ footer{
     }
       /* Modal Content */
       .modal-content {
-        border-radius: 30px;
+        border-radius: 15px;
         background-color: #fefefe;
         margin: auto;
         padding: 30px 70px;

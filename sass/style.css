@@ -120,7 +120,7 @@ article {
   text-align: right;
   height: 20%;
 }
-.text-article .line-break {
+.text-article :nth-child(1) {
   margin-top: 20px;
 }
 
@@ -170,7 +170,7 @@ footer .terms-policy .policy {
   opacity: 70%;
   margin-right: 10px;
 }
-footer .terms-policy .policy-privacy{
+footer .terms-policy .policy-privacy {
   opacity: 70%;
 }
 footer .terms-policy .terms {
@@ -183,6 +183,12 @@ footer .terms-policy .policy:hover {
 footer .terms-policy .terms:hover {
   opacity: 100%;
   cursor: pointer;
+}
+footer .tablinks {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .download-app {
   display: flex;
@@ -434,6 +440,9 @@ footer #copyright {
     font-size: 20px;
   }
 
+  .text-article .secondary-text :nth-child(1) {
+    margin-top: 0;
+  }
   .text-article p {
     font-size: 20px;
   }
@@ -535,6 +544,35 @@ footer #copyright {
   }
 }
 @media only screen and (min-width: 1250px) {
+  .modal ::-webkit-scrollbar-track {
+    background-color: #c4c4c4;
+    border-radius: 0 30px 30px 0;
+  }
+  .modal ::-webkit-scrollbar {
+    width: 15px;
+    background: #c4c4c4;
+    border-radius: 0 30px 30px 0;
+  }
+  .modal ::-webkit-scrollbar-thumb {
+    background: #3F51B5;
+    border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #c4c4c4;
+    border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 15px;
+    background: #c4c4c4;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3F51B5;
+    border-radius: 30px;
+  }
+
   .download-app {
     justify-content: flex-start;
     align-items: flex-end;
@@ -646,7 +684,6 @@ footer #copyright {
   }
 
   .tablinks {
-    height: 25px;
     cursor: pointer;
   }
 
@@ -674,6 +711,7 @@ footer #copyright {
     padding: 30px 70px;
     width: 80vw;
     height: 80vh;
+    border-radius: 15px;
   }
   .modal-content p {
     color: #2E2C8A;
@@ -684,7 +722,12 @@ footer #copyright {
 
   footer #copyright {
     opacity: 70%;
-    margin-top: 3.8rem;
+    margin-top: 4.8rem;
+  }
+
+  footer .download-app {
+    margin-top: 50px;
+    padding-bottom: 0;
   }
 
   .copyright {
@@ -781,7 +824,7 @@ footer #copyright {
 
   /* Modal Content */
   .modal-content {
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: #fefefe;
     margin: auto;
     padding: 30px 70px;
