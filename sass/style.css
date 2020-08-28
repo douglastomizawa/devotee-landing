@@ -170,6 +170,9 @@ footer .terms-policy .policy {
   opacity: 70%;
   margin-right: 10px;
 }
+footer .terms-policy .policy-privacy{
+  opacity: 70%;
+}
 footer .terms-policy .terms {
   opacity: 70%;
 }
@@ -643,7 +646,11 @@ footer #copyright {
   }
 
   .tablinks {
+    height: 25px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .tab {

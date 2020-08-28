@@ -165,6 +165,9 @@ footer{
             opacity: $opacity-70;
             margin-right: 10px;
         }
+        .policy-privacy{
+            opacity: $opacity-70
+        }
         .terms{
             opacity: $opacity-70;
         }
@@ -642,6 +645,10 @@ footer{
       }
       .tablinks{
           cursor: pointer;
+          height: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
       }
       .tab{
         display: grid;
