@@ -107,7 +107,9 @@
     function styleTextTabs(evt,analyze){
         if(analyze == '1'){
             let tabContent,tabs;
-            let elementClicked = evt.path[1];
+            let elementClicked = evt.composedPath()[1];
+            console.log(evt, elementClicked)
+            
             tabContent = document.getElementsByClassName("content-terms");
             tabs = document.getElementsByClassName("tab");
             for (let i = 0; i < tabContent.length; i++) {
