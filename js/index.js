@@ -21,7 +21,6 @@ class LandingDevotee{
         let modalId = document.querySelector("#my-modal-policy");
         let btn = "my-btn-policy";
         let close = "close-policy";
-        console.log('s')
         this.modal(modalId, btn, close)
     }
     modalTerms(){
@@ -46,7 +45,6 @@ class LandingDevotee{
         let btnClass = [];
         document.addEventListener('click', (e) =>{
             let targetClass = e.target.getAttribute('data-click');
-            console.log(targetClass)
             switch (targetClass) {
                 case 'click-terms':
                     btnClass[0] = 'click-terms'
@@ -115,21 +113,15 @@ class LandingDevotee{
         let elementClicked = evt.path[1];
         tabContent = document.getElementsByClassName("content-terms");
         tabs = document.getElementsByClassName("tab");
-        console.log(tabContent);
         for (let i = 0; i < tabContent.length; i++) {
             tabContent[i].classList.remove('modal-terms'); 
         }
         for (let e = 0; e < tabContent.length-6; e++) {
-            console.log(elementClicked.classList.value , tabs[0].children[e].classList.value)
             if(elementClicked.classList.value == tabs[0].children[e].classList.value){
                 tabs[0].children[e].classList.add('modal-terms');
             }
          
         }
-    }
-    styleTabsTerms(evt, cityName){
-        console.log(evt)
-        console.log(cityName)
     }
     getJSONPolicy(){
         let policyPivacy = JSON.parse(dataprivacy);
