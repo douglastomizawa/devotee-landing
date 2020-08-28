@@ -648,9 +648,6 @@ footer #copyright {
   .tablinks {
     height: 25px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .tab {
