@@ -74,7 +74,6 @@ class LandingDevotee{
             if(targetClass){
                 this.hideTabs()
                 this.openTabs(e, btnClass)
-                this.styleTabsTerms(e, btnClass);
                 this.getJSONPolicy()
             }     
 		});
