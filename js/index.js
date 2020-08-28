@@ -1,35 +1,32 @@
-class LandingDevotee{
-    constructor(){
-        this.initialize()
-        this.btnClasses;
+
+    function initialize(){
+        copyright();
+        modal();
+        modalTerms();
+        modalPolicy()
+        getJSONPolicy();
+        openTabsClick();
+        execClickTabs()
+        alternateImg()
     }
-    initialize(){
-        this.copyright();
-        this.modal();
-        this.modalTerms();
-        this.modalPolicy()
-        this.getJSONPolicy();
-        this.openTabsClick();
-        this.execClickTabs()
-        this.alternateImg()
-    }
-    copyright(){
+    initialize()
+    function copyright(){
         let copyright = document.querySelector('#copyright')
         copyright.innerHTML=` Copyright © ${new Date().getFullYear()} Devotee. Todos direitos reservados.`
     }
-    modalPolicy(){
+    function modalPolicy(){
         let modalId = document.querySelector("#my-modal-policy");
         let btn = "my-btn-policy";
         let close = "close-policy";
-        this.modal(modalId, btn, close)
+        modal(modalId, btn, close)
     }
-    modalTerms(){
+    function modalTerms(){
         let modalId = document.querySelector("#my-modal-terms");
         let btn = "my-btn-terms";
         let close = "close-terms";
-        this.modal(modalId, btn, close)
+        modal(modalId, btn, close)
     }
-    modal(modalId, btn, close) {  
+    function modal(modalId, btn, close) {  
         document.addEventListener('click', (e) =>{
             let targetClass = e.target.classList.contains(btn);
             let targetClassClose = e.target.classList.contains(close);
@@ -41,7 +38,7 @@ class LandingDevotee{
             }
 		});
     }
-    execClickTabs(){
+    function execClickTabs(){
         let btnClass = [];
         document.addEventListener('click', (e) =>{
             let targetClass = e.target.getAttribute('data-click');
@@ -65,41 +62,41 @@ class LandingDevotee{
                     break;
             }
         });  
-        this.openTabsClick(btnClass)
+        openTabsClick(btnClass)
     }
     
-    openTabsClick(btnClass){
+    function openTabsClick(btnClass){
         document.addEventListener('click', (e) =>{     
             let targetClass = e.target.classList.contains(btnClass);
             if(targetClass){
-                this.hideTabs()
-                this.openTabs(e, btnClass)
-                this.getJSONPolicy()
+                hideTabs()
+                openTabs(e, btnClass)
+                getJSONPolicy()
             }     
 		});
     }
-    hideTabs(){
+    function hideTabs(){
         let i, tabcontent
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
     }
-    alternateImg(){
+    function alternateImg(){
         if(window.innerWidth >= '1250'){
            document.getElementById('phone').src = './assets/iPhone@2x.png'     
         }
       
         
     }
-    openTabs(evt, cityName) {  
+    function openTabs(evt, cityName) {  
         let i, tabcontent,tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
         tablinks = document.getElementsByClassName("tablinks");
-        this.styleTextTabs(evt)
+        styleTextTabs(evt)
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
@@ -107,7 +104,7 @@ class LandingDevotee{
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
       }
-    styleTextTabs(evt){
+    function styleTextTabs(evt){
         let tabContent,tabs;
         let elementClicked = evt.composedPath()[1];
         tabContent = document.getElementsByClassName("content-terms");
@@ -122,7 +119,7 @@ class LandingDevotee{
          
         }
     }
-    getJSONPolicy(){
+    function getJSONPolicy(){
         let policyPivacy = JSON.parse(dataprivacy);
         let terms = JSON.parse(dataterms);
         let cookies = JSON.parse(datacookies);
@@ -134,4 +131,3 @@ class LandingDevotee{
         document.getElementById('procedure').innerHTML = procedure[0].content;
         document.getElementById('security').innerHTML = security[0].content;
     }
-}
