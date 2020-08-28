@@ -30,7 +30,7 @@ class LandingDevotee{
         this.modal(modalId, btn, close)
     }
     modal(modalId, btn, close) {  
-        document.addEventListener('click', (e) =>{
+        document.addEventListener('click', function(e) {
             let targetClass = e.target.classList.contains(btn);
             let targetClassClose = e.target.classList.contains(close);
             if(targetClass){
@@ -43,7 +43,7 @@ class LandingDevotee{
     }
     execClickTabs(){
         let btnClass = [];
-        document.addEventListener('click', (e) =>{
+        document.addEventListener('click', function(e) {
             let targetClass = e.target.getAttribute('data-click');
             switch (targetClass) {
                 case 'click-terms':
@@ -69,7 +69,7 @@ class LandingDevotee{
     }
     
     openTabsClick(btnClass){
-        document.addEventListener('click', (e) =>{     
+        document.addEventListener('click', function(e) {     
             let targetClass = e.target.classList.contains(btnClass);
             if(targetClass){
                 this.hideTabs()
