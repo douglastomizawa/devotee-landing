@@ -109,7 +109,7 @@ class LandingDevotee{
       }
     styleTextTabs(evt){
         let tabContent,tabs;
-        let elementClicked = evt.path[1];
+        let elementClicked = evt.composedPath()[1];
         tabContent = document.getElementsByClassName("content-terms");
         tabs = document.getElementsByClassName("tab");
         for (let i = 0; i < tabContent.length; i++) {
