@@ -1,1 +1,0 @@
-window.landing = new LandingDevotee()
