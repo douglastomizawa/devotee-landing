@@ -99,7 +99,7 @@ class LandingDevotee{
           tabcontent[i].style.display = "none";
         }
         tablinks = document.getElementsByClassName("tablinks");
-        this.styleTextTabs(evt)
+        this.styleTextTabs(evt,'1')
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
@@ -107,20 +107,23 @@ class LandingDevotee{
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
       }
-    styleTextTabs(evt){
-        let tabContent,tabs;
-        let elementClicked = evt.path[1];
-        tabContent = document.getElementsByClassName("content-terms");
-        tabs = document.getElementsByClassName("tab");
-        for (let i = 0; i < tabContent.length; i++) {
-            tabContent[i].classList.remove('modal-terms'); 
-        }
-        for (let e = 0; e < tabContent.length-6; e++) {
-            if(elementClicked.classList.value == tabs[0].children[e].classList.value){
-                tabs[0].children[e].classList.add('modal-terms');
+    styleTextTabs(evt,analyze){
+        if(analyze == '1'){
+            let tabContent,tabs;
+            let elementClicked = evt.path[1];
+            tabContent = document.getElementsByClassName("content-terms");
+            tabs = document.getElementsByClassName("tab");
+            for (let i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove('modal-terms'); 
             }
-         
+            for (let e = 0; e < tabContent.length-6; e++) {
+                if(elementClicked.classList.value == tabs[0].children[e].classList.value){
+                    tabs[0].children[e].classList.add('modal-terms');
+                }
+             
+            }
         }
+        
     }
     getJSONPolicy(){
         let policyPivacy = JSON.parse(dataprivacy);
