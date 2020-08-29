@@ -36,7 +36,7 @@ var data = [{
     }},{
     "us": {
         "login":"Sign in",
-        "srcphone":"./assets/iPhone@2x.png",
+        "srcphone":"./assets/iPhone@2x-en.png",
         "title":"Welcome to Devotee",
         "subtitle":"The best place to connect with special people",
         "pimarytext" :"Now get's easyer to meet your",
@@ -45,8 +45,8 @@ var data = [{
         "subsecundarytext":"Match. Talk.",
         "signup":"Register",
         "download":"Get the app!",
-        "srcplaystore":"./assets/playstore.svg",
-        "srcapplestore":"./assets/appstore.svg",
+        "srcplaystore":"./assets/playstore-en.svg",
+        "srcapplestore":"./assets/appstore-en.svg",
         "videotitle":"Inspiring Stories",
         "srcvideoyoutube":"https://www.youtube.com/embed/_uzK2aXnlCE",
         "tabtermsuse":"Terms of use",
@@ -63,7 +63,7 @@ var data = [{
         "footpolicy":"Privacy Policy",
         "footterms":"Terms of use",
         "footdownload":"Get the app!",
-        "srcfootplaystore":"./assets/playstore.svg",
-        "srcfootapplestore":"./assets/appstore.svg"
+        "srcfootplaystore":"./assets/playstore-en.svg",
+        "srcfootapplestore":"./assets/appstore-en.svg"
     } 
 }]
