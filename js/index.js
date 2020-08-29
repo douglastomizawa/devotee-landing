@@ -83,9 +83,9 @@
         }
     }
     function alternateImg(){
-        if(window.innerWidth >= '1250'){
-           document.getElementById('phone').src = './assets/iPhone@2x.png'     
-        }
+        // if(window.innerWidth >= '1250'){
+        //    document.getElementById('phone').src = './assets/iPhone@2x.png'     
+        // }
       
         
     }
@@ -120,14 +120,10 @@
         }
     }
     function getJSONPolicy(){
-        let policyPivacy = JSON.parse(dataprivacy);
-        let terms = JSON.parse(dataterms);
-        let cookies = JSON.parse(datacookies);
-        let procedure = JSON.parse(dataprocedure);
-        let security = JSON.parse(datasecurity);
-        document.getElementById('terms-of-use').innerHTML = terms[0].content;
-        document.getElementById('policy-privacy-1').innerHTML = policyPivacy[0].content;
-        document.getElementById('policy-cookies').innerHTML = cookies[0].content;
-        document.getElementById('procedure').innerHTML = procedure[0].content;
-        document.getElementById('security').innerHTML = security[0].content;
+        let dataPt = JSON.parse(datapt);
+        document.getElementById('termsuse').innerHTML = dataPt[0].termsuse;
+        document.getElementById('policyprivacy').innerHTML = dataPt[1].policyprivacy;
+        document.getElementById('policycookies').innerHTML = dataPt[2].policycookies;
+        document.getElementById('procedure').innerHTML = dataPt[3].procedure;
+        document.getElementById('security').innerHTML = dataPt[4].security;
     }
