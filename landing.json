@@ -1,9 +1,69 @@
-{
-    "pt":{
+var data = [{
+    "pt": {
+        "login":"Entrar",
+        "srcphone":"trocar",
         "title":"Seja bem-vindo ao Devotee",
+        "subtitle":"O melhor lugar para te conectar com pessoais especiais",
+        "pimarytext" :"Agora ficou fácil conhecer sua",
+        "subprimarytext":"cara metade.",
+        "secundarytext":"Curta.",
+        "subsecundarytext":" Faça um Match. Converse.",
+        "signup":"Cadastre-se",
+        "download":"Baixe o aplicativo!",
+        "srcplaystore":"./assets/playstore.svg",
+        "srcapplestore":"./assets/appstore.svg",
+        "videotitle":"Hitórias que Inspiram",
+        "srcvideoyoutube":"https://www.youtube-nocookie.com/embed/8RiURRyasuk?start=5",
+        "tabtermsuse":"Termos de Uso",
+        "tabpolicyprivacy":"Política de Privacidade",
+        "tabpolicycookies":"Política de Cookies",
+        "tabprocedures":"Procedimentos Arbitrais",
+        "tabsecurity":"Dicas de Segurança",
+        "tabtitletermsuse":"Termos de Uso",
+        "tabrevision":"Última revisão em 01/08/2020",
+        "tabtitlepolicy":"Política de Privacidade",
+        "tabtitlepolicycookies":"Política de Cookies",
+        "tabtitleprocedure":"Procedimentos Arbitrais",
+        "tabtitlesecurity":"Dicas de Segurança",
+        "footpolicy":"Política de Privacidade",
+        "footterms":"Termos de Uso",
+        "footdownload":"Baixe o aplicativo!",
+        "srcfootplaystore":"./assets/playstore.svg",
+        "srcfootapplestore":"./assets/appstore.svg"
+        
 
-    },
-    "us":{
-        "title":"Welcome to Devotee"
-    }
-}
+
+    }},{
+    "us": {
+        "login":"Sign in",
+        "srcphone":"./assets/iPhone@2x.png",
+        "title":"Welcome to Devotee",
+        "subtitle":"The best place to connect with special people",
+        "pimarytext" :"Now get's easyer to meet your",
+        "subprimarytext":"cup of tea",
+        "secundarytext":"Like.",
+        "subsecundarytext":"Match. Talk.",
+        "signup":"Register",
+        "download":"Get the app!",
+        "srcplaystore":"./assets/playstore.svg",
+        "srcapplestore":"./assets/appstore.svg",
+        "videotitle":"Inspiring Stories",
+        "srcvideoyoutube":"https://www.youtube.com/embed/_uzK2aXnlCE",
+        "tabtermsuse":"Terms of use",
+        "tabpolicyprivacy":"Privacy Policy",
+        "tabpolicycookies":"Cookies Policy",
+        "tabprocedures":"Arbitration Procedures",
+        "tabsecurity":"Safety Tips",
+        "tabtitletermsuse":"Terms of use",
+        "tabrevision":"Last revision at 08/01/2020",
+        "tabtitlepolicy":"Privacy Policy",
+        "tabtitlepolicycookies":"Cookies Policy",
+        "tabtitleprocedure":"Arbitration Procedures",
+        "tabtitlesecurity":"Safety Tips",
+        "footpolicy":"Privacy Policy",
+        "footterms":"Terms of use",
+        "footdownload":"Get the app!",
+        "srcfootplaystore":"./assets/playstore.svg",
+        "srcfootapplestore":"./assets/appstore.svg"
+    } 
+}]

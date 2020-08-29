@@ -8,10 +8,38 @@
         openTabsClick();
         execClickTabs()
         alternateImg()
+        verifyLanguage();
     }
     initialize()
+    function verifyLanguage(){
+        let dataTraduction = data;
+        var userLang = navigator.language || navigator.userLanguage;
+        switch (userLang) {
+            case 'pt-BR':
+                console.log(dataTraduction[0].pt)
+                    traductionLanguage(dataTraduction[0].pt)
+                break;
+            case 'en':
+                return  console.log(dataTraduction[0].pt);
+            break;
+        
+            default:
+                break;
+        }
+    }
+    function traductionLanguage(data){
+        for (let i = 0; i < Object.values(data).length; i++) {
+            let objectKeys = Object.keys(data)[i],
+            objectValue = Object.values(data)[i],
+            elementIds =  document.getElementById(objectKeys);
+            elementIds.textContent = objectValue;
+            if(objectKeys.indexOf('src') != -1){
+                document.getElementById(objectKeys).src = objectValue
+            }
+        }
+    }
     function copyright(){
-        let copyright = document.querySelector('#copyright')
+        let copyright = document.querySelector('#copyright');
         copyright.innerHTML=` Copyright © ${new Date().getFullYear()} Devotee. Todos direitos reservados.`
     }
     function modalPolicy(){
