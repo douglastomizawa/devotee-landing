@@ -14,12 +14,13 @@
     function verifyLanguage(){
         let dataTraduction = data;
         var userLang = navigator.language || navigator.userLanguage;
+        console.log(userLang)
         switch (userLang) {
             case 'pt-BR':
                 traductionLanguage(dataTraduction[0].pt)
                 break;
-            case 'en':
-                traductionLanguage(dataTraduction[0].en)
+            case 'en-US':
+                traductionLanguage(dataTraduction[1].us)
             break;
         
             default:
@@ -27,6 +28,7 @@
         }
     }
     function traductionLanguage(data){
+        console.log(data)
         for (let i = 0; i < Object.values(data).length; i++) {
             let objectKeys = Object.keys(data)[i],
             objectValue = Object.values(data)[i],
