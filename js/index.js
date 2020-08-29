@@ -16,11 +16,10 @@
         var userLang = navigator.language || navigator.userLanguage;
         switch (userLang) {
             case 'pt-BR':
-                console.log(dataTraduction[0].pt)
-                    traductionLanguage(dataTraduction[0].pt)
+                traductionLanguage(dataTraduction[0].pt)
                 break;
             case 'en':
-                return  console.log(dataTraduction[0].pt);
+                traductionLanguage(dataTraduction[0].en)
             break;
         
             default:
