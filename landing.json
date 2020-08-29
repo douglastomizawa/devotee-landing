@@ -1,7 +1,7 @@
 var data = [{
     "pt": {
         "login":"Entrar",
-        "srcphone":"trocar",
+        "srcphone":"./assets/iPhone@2x.png",
         "title":"Seja bem-vindo ao Devotee",
         "subtitle":"O melhor lugar para te conectar com pessoais especiais",
         "pimarytext" :"Agora ficou fácil conhecer sua",
