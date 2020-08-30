@@ -14,21 +14,22 @@
     function verifyLanguage(){
         let dataTraduction = data;
         var userLang = navigator.language || navigator.userLanguage;
-        console.log(userLang)
         switch (userLang) {
             case 'pt-BR':
-                traductionLanguage(dataTraduction[0].pt)
+                traductionLanguage(dataTraduction[0].pt);
+                // getJSONPolicy(JSON.parse(datapt))
                 break;
             case 'en-US':
-                traductionLanguage(dataTraduction[1].us)
+                traductionLanguage(dataTraduction[1].us);
+                // getJSONPolicy(JSON.parse(dataen))
             break;
         
             default:
-                traductionLanguage(dataTraduction[1].us)
+                traductionLanguage(dataTraduction[1].us);
                 break;
         }
     }
-    function traductionLanguage(data){
+    function traductionLanguage(data, ){
         for (let i = 0; i < Object.values(data).length; i++) {
             let objectKeys = Object.keys(data)[i],
             objectValue = Object.values(data)[i],
@@ -148,11 +149,16 @@
          
         }
     }
-    function getJSONPolicy(){
-        let dataPt = JSON.parse(datapt);
-        document.getElementById('termsuse').innerHTML = dataPt[0].termsuse;
-        document.getElementById('policyprivacy').innerHTML = dataPt[1].policyprivacy;
-        document.getElementById('policycookies').innerHTML = dataPt[2].policycookies;
-        document.getElementById('procedure').innerHTML = dataPt[3].procedure;
-        document.getElementById('security').innerHTML = dataPt[4].security;
+    function getJSONPolicy(data){
+        // console.log(data)
+        // if(data != undefined){
+        //     console.log(data)
+        //     document.getElementById('termsuse').innerHTML = data[0].termsuse;
+       
+        // }
+        // document.getElementById('termsuse').innerHTML = data[0].termsuse;
+        // document.getElementById('policyprivacy').innerHTML = data[1].policyprivacy;
+        // document.getElementById('policycookies').innerHTML = data[2].policycookies;
+        // document.getElementById('procedure').innerHTML = data[3].procedure;
+        // document.getElementById('security').innerHTML = data[4].security;
     }
