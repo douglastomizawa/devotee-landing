@@ -24,16 +24,16 @@
             break;
         
             default:
+                traductionLanguage(dataTraduction[1].us)
                 break;
         }
     }
     function traductionLanguage(data){
-        console.log(data)
         for (let i = 0; i < Object.values(data).length; i++) {
             let objectKeys = Object.keys(data)[i],
             objectValue = Object.values(data)[i],
             elementIds =  document.getElementById(objectKeys);
-            elementIds.textContent = objectValue;
+            elementIds.innerHTML = objectValue;
             if(objectKeys.indexOf('src') != -1){
                 document.getElementById(objectKeys).src = objectValue
             }

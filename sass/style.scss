@@ -140,9 +140,12 @@ article{
     .buttons-download{
         display: flex;      
         justify-content: space-between;
+        img{
+            width: auto;
+            height: 23px;
+        }
     }
 }
-
 .container-video{
     display: flex;
     justify-content: center;
@@ -357,9 +360,6 @@ footer{
     .download-app{
         .buttons-download{
             margin-top: 5px;
-            img{
-                width: 85px;
-            }
         }
     }
 }
@@ -371,13 +371,15 @@ footer{
 }
 @media only screen and (min-width: 555px) {
     .download-app{
+        padding-bottom: 0;
         p{
             text-align: right;
         }
         .buttons-download{
             justify-content: flex-end;
             img{
-                width: 85px;
+                width: auto;
+                height: 35px;
             }
             :first-child{
                 margin-right: 10px;

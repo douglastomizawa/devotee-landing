@@ -144,6 +144,10 @@ article {
   display: flex;
   justify-content: space-between;
 }
+.download-app .buttons-download img {
+  width: auto;
+  height: 23px;
+}
 
 .container-video {
   display: flex;
@@ -364,9 +368,6 @@ footer #copyright {
   .download-app .buttons-download {
     margin-top: 5px;
   }
-  .download-app .buttons-download img {
-    width: 85px;
-  }
 }
 @media only screen and (max-width: 360px) {
   .container-text {
@@ -374,6 +375,9 @@ footer #copyright {
   }
 }
 @media only screen and (min-width: 555px) {
+  .download-app {
+    padding-bottom: 0;
+  }
   .download-app p {
     text-align: right;
   }
@@ -381,7 +385,8 @@ footer #copyright {
     justify-content: flex-end;
   }
   .download-app .buttons-download img {
-    width: 85px;
+    width: auto;
+    height: 35px;
   }
   .download-app .buttons-download :first-child {
     margin-right: 10px;
