@@ -45,7 +45,7 @@ var data = [{
         "srcphone":"./assets/iPhone@2x-en.png",
         "title":"Welcome to Devotee",
         "subtitle":"The best place to connect with special people",
-        "pimarytext" :"Now its easier to find your soulmate",
+        "pimarytext" :"Now it’s easier to find your soulmate",
         "subprimarytext":"cup of tea",
         "secundarytext":"Like.",
         "subsecundarytext":"Match. Talk.",
