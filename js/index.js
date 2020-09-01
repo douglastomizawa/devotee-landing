@@ -1,12 +1,10 @@
 
     function initialize(){
-        copyright();
         modal();
         modalTerms();
-        modalPolicy()
+        modalPolicy();
         openTabsClick();
-        execClickTabs()
-        alternateImg()
+        execClickTabs();
         verifyLanguage();
     }
     initialize()
@@ -16,30 +14,36 @@
         switch (userLang) {
             case 'pt-BR':
                 traductionLanguage(dataTraduction[0].pt);
+                copyright(dataTraduction[0].pt.copyright);
                 break;
             case 'en-US':
                 traductionLanguage(dataTraduction[1].us);
+                copyright(dataTraduction[1].us.copyright);
             break;
         
             default:
                 traductionLanguage(dataTraduction[1].us);
+                copyright(dataTraduction[1].us.copyright);
                 break;
         }
     }
-    function traductionLanguage(data, ){
+    function traductionLanguage(data){
         for (let i = 0; i < Object.values(data).length; i++) {
             let objectKeys = Object.keys(data)[i],
             objectValue = Object.values(data)[i],
             elementIds =  document.getElementById(objectKeys);
-            elementIds.innerHTML = objectValue;
-            if(objectKeys.indexOf('src') != -1){
-                document.getElementById(objectKeys).src = objectValue
+            
+            if(objectKeys.indexOf('alt') == -1){
+                elementIds.innerHTML = objectValue;
             }
+            if(objectKeys.indexOf('src') != -1){
+                elementIds.src = objectValue
+            } 
         }
     }
-    function copyright(){
+    function copyright(text){
         let copyright = document.querySelector('#copyright');
-        copyright.innerHTML=` Copyright © ${new Date().getFullYear()} Devotee. Todos direitos reservados.`
+        copyright.innerHTML=` Copyright © ${new Date().getFullYear()} ${text}`
     }
     function modalPolicy(){
         let modalId = document.querySelector("#my-modal-policy");
@@ -107,13 +111,6 @@
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
-    }
-    function alternateImg(){
-        // if(window.innerWidth >= '1250'){
-        //    document.getElementById('phone').src = './assets/iPhone@2x.png'     
-        // }
-      
-        
     }
     function openTabs(evt, cityName) {  
         let i, tabcontent,tablinks;
