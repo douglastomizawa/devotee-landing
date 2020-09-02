@@ -11,6 +11,7 @@
     function verifyLanguage(){
         let dataTraduction = data;
         var userLang = navigator.language;
+        alert(userLang)
         switch (userLang) {
             case 'pt-BR':
                 traductionLanguage(dataTraduction[0].pt);
