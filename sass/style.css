@@ -178,16 +178,17 @@ footer .terms-policy .policy {
   opacity: 70%;
   margin-right: 10px;
 }
-footer .terms-policy .policy-privacy {
-  color: #fff;
-  opacity: 70%;
-  text-decoration: none;
-}
 footer .terms-policy .terms {
   color: #fff;
   opacity: 70%;
   text-decoration: none;
 }
+footer .terms-policy .policy-privacy {
+  color: #fff;
+  opacity: 70%;
+  text-decoration: none;
+}
+
 footer .terms-policy .policy:hover {
   opacity: 100%;
   cursor: pointer;
