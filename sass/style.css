@@ -179,10 +179,14 @@ footer .terms-policy .policy {
   margin-right: 10px;
 }
 footer .terms-policy .policy-privacy {
+  color: #fff;
   opacity: 70%;
+  text-decoration: none;
 }
 footer .terms-policy .terms {
+  color: #fff;
   opacity: 70%;
+  text-decoration: none;
 }
 footer .terms-policy .policy:hover {
   opacity: 100%;
@@ -229,55 +233,6 @@ footer #copyright {
   opacity: 70%;
   margin-top: 1rem;
   font-size: 0.8rem;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: #2E2C8A;
-}
-
-.modal-terms {
-  font-style: italic;
-  text-decoration: underline;
-}
-
-.modal-terms-remove {
-  font-style: none;
-  text-decoration: none;
-}
-
-.close-terms {
-  cursor: pointer;
-}
-
-.content-close {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.tab {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 1px solid rgba(46, 44, 138, 0.5);
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-}
-.tab a {
-  color: #2E2C8A;
-  font-size: 15px;
-}
-.tab .content-terms {
-  margin-top: 10px;
-  width: 50%;
 }
 
 /* Modal Content */

@@ -173,9 +173,15 @@ footer{
             margin-right: 10px;
         }
         .policy-privacy{
+            color: #fff;
+            opacity: 70%;
+            text-decoration: none;
             opacity: $opacity-70
         }
         .terms{
+            color: #fff;
+            opacity: 70%;
+            text-decoration: none;
             opacity: $opacity-70;
         }
         .policy:hover{
@@ -229,49 +235,10 @@ footer{
     }
 }
 
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100vw; 
-    height: 100vh; 
-    overflow: auto; 
-    background-color: $secondary-text;
-  }
-.modal-terms {
-    font-style: italic;
-    text-decoration: underline;
-}
-.modal-terms-remove {
-    font-style: none;
-    text-decoration: none;
-}
-.close-terms{
-    cursor: pointer;
-}
-  .content-close{
-      display: flex;
-      justify-content: flex-end;
-  }
-  .tab{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 1px solid rgba(46, 44, 138, 0.5);
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    a{
-        color: $secondary-text;
-        font-size: 15px;
-    }
-    .content-terms{
-        margin-top: 10px;
-        width: 50%;
-    }
-}
+
+
+
+  
   /* Modal Content */
   .modal-content {
     border-radius: 30px;

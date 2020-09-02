@@ -10,14 +10,14 @@
     initialize()
     function verifyLanguage(){
         let dataTraduction = data;
-        var userLang = navigator.language;
-        
-        switch (userLang.indexOf('pt')) {
-            case 0:
+        // var userLang = navigator.language;
+        let location = window.location.href 
+        switch (location.toString().indexOf('.com.br') || location.toString().indexOf('.network')) {
+            case 'pt':
                 traductionLanguage(dataTraduction[0].pt);
                 copyright(dataTraduction[0].pt.copyright);
                 break;
-            case 0:
+            case 'en':
                 traductionLanguage(dataTraduction[1].us);
                 copyright(dataTraduction[1].us.copyright);
             break;
@@ -63,7 +63,7 @@
             let targetClass = e.target.classList.contains(btn);
             let targetClassClose = e.target.classList.contains(close);
             if(targetClass){
-                modalId.style.display = "flex";
+                modalId.style.display = "none";
             }
             if(targetClassClose){
                 modalId.style.display = "none";
