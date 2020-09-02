@@ -7,7 +7,7 @@
         let dataTraduction = data;
         console.log(data)
         // var userLang = navigator.language;
-        let location = window.location.href ;.
+        let location = window.location.href ;
         console.log(location)
         switch (location) {
             case 'devotee.com.br':
