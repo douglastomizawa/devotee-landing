@@ -10,7 +10,7 @@
     initialize()
     function verifyLanguage(){
         let dataTraduction = data;
-        var userLang = navigator.language || navigator.userLanguage;
+        var userLang = navigator.language;
         switch (userLang) {
             case 'pt-BR':
                 traductionLanguage(dataTraduction[0].pt);
