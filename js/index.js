@@ -11,13 +11,13 @@
     function verifyLanguage(){
         let dataTraduction = data;
         var userLang = navigator.language;
-        alert(userLang)
-        switch (userLang) {
-            case 'pt-BR':
+        
+        switch (userLang.indexOf('pt')) {
+            case 0:
                 traductionLanguage(dataTraduction[0].pt);
                 copyright(dataTraduction[0].pt.copyright);
                 break;
-            case 'en-US':
+            case 0:
                 traductionLanguage(dataTraduction[1].us);
                 copyright(dataTraduction[1].us.copyright);
             break;
